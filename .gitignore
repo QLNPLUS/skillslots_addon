@@ -1,0 +1,8 @@
+.gradle/
+build/
+run/
+.idea/
+*.iml
+
+# SkillSlots is a local compile-only dependency and must not be redistributed.
+libs/*.jar

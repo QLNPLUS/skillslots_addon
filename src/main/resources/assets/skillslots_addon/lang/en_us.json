@@ -1,0 +1,15 @@
+{
+  "gui.skillslots_addon.keygroup": "Skill Slots Addon (GUI Only)",
+  "keybind.skillslots_addon.gui_use.1": "GUI Skill Slot 1",
+  "keybind.skillslots_addon.gui_use.2": "GUI Skill Slot 2",
+  "keybind.skillslots_addon.gui_use.3": "GUI Skill Slot 3",
+  "keybind.skillslots_addon.gui_use.4": "GUI Skill Slot 4",
+  "keybind.skillslots_addon.gui_use.5": "GUI Skill Slot 5",
+  "keybind.skillslots_addon.gui_use.6": "GUI Skill Slot 6",
+  "keybind.skillslots_addon.gui_use.7": "GUI Skill Slot 7",
+  "keybind.skillslots_addon.gui_use.8": "GUI Skill Slot 8",
+  "keybind.skillslots.use.5": "Use Skill 5",
+  "keybind.skillslots.use.6": "Use Skill 6",
+  "keybind.skillslots.use.7": "Use Skill 7",
+  "keybind.skillslots.use.8": "Use Skill 8"
+}

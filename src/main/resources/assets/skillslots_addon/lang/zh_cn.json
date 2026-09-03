@@ -1,0 +1,15 @@
+{
+  "gui.skillslots_addon.keygroup": "技能槽附属（仅界面）",
+  "keybind.skillslots_addon.gui_use.1": "界面技能槽 1",
+  "keybind.skillslots_addon.gui_use.2": "界面技能槽 2",
+  "keybind.skillslots_addon.gui_use.3": "界面技能槽 3",
+  "keybind.skillslots_addon.gui_use.4": "界面技能槽 4",
+  "keybind.skillslots_addon.gui_use.5": "界面技能槽 5",
+  "keybind.skillslots_addon.gui_use.6": "界面技能槽 6",
+  "keybind.skillslots_addon.gui_use.7": "界面技能槽 7",
+  "keybind.skillslots_addon.gui_use.8": "界面技能槽 8",
+  "keybind.skillslots.use.5": "使用技能 5",
+  "keybind.skillslots.use.6": "使用技能 6",
+  "keybind.skillslots.use.7": "使用技能 7",
+  "keybind.skillslots.use.8": "使用技能 8"
+}
