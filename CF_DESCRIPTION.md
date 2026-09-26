@@ -17,6 +17,7 @@ SkillSlots Addon is a Forge 1.20.1 addon for [SkillSlots](https://github.com/Sno
 - `HORIZONTAL`: use a centered row for 1-4 slots and two rows for 5-8 slots.
 - Optionally hide locked slots and automatically compact the layout.
 - Optionally show item tooltips when hovering a skill slot.
+- Support line breaks in custom skill button names with `\n`.
 
 ### Right-click trigger switches
 

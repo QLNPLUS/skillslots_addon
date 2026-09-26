@@ -13,9 +13,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
+import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;
+import net.minecraft.network.chat.Component;
 import java.util.Locale;
 import snownee.skillslots.SkillSlotsHandler;
 import snownee.skillslots.SkillSlotsCommonConfig;
@@ -192,6 +194,32 @@ public abstract class UseScreenMixin {
 		Skill skill = handler.skills.get(clickIndex);
 		if (!skill.isEmpty()) {
 			graphics.renderTooltip(Minecraft.getInstance().font, skill.item, mouseX, mouseY);
+		}
+	}
+
+	/**
+	 * SkillSlots draws the skill display name directly on each wheel button.
+	 * Draw escaped or parsed newlines as separate centered rows at that call site.
+	 */
+	@Redirect(
+			method = "drawButton",
+			at = @At(
+					value = "INVOKE",
+					target = "Lnet/minecraft/client/gui/GuiGraphics;m_280653_(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;III)V"))
+	private void skillslotsaddon$drawMultilineSkillName(
+			GuiGraphics graphics, Font font, Component text, int x, int y, int color) {
+		String name = text.getString().replace("\\n", "\n").replace("\r\n", "\n");
+		if (!name.contains("\n")) {
+			graphics.drawCenteredString(font, text, x, y, color);
+			return;
+		}
+
+		String[] lines = name.split("\n", -1);
+		int lineSpacing = font.lineHeight + 2;
+		int firstLineY = y - (lines.length - 1) * lineSpacing / 2;
+		for (int i = 0; i < lines.length; i++) {
+			Component line = Component.literal(lines[i]).setStyle(text.getStyle());
+			graphics.drawCenteredString(font, line, x, firstLineY + i * lineSpacing, color);
 		}
 	}
 

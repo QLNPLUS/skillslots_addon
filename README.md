@@ -18,6 +18,8 @@ Forge 1.20.1 的 [SkillSlots](https://github.com/Snownee/SkillSlots)（2.1.1+for
   - `true`：技能轮盘只显示已解锁槽位，布局自动按可见槽位收缩。
 - **showItemTooltips**：鼠标悬停在技能槽上时显示物品 Tooltip（默认开启；
   原版 2.1.1 发布版不显示）。
+- 物品自定义名称中的 `\n` 仅在技能按钮名称中换行显示，
+  例如 `{"text":"第一行\n第二行"}`。
 
 ### 2. 触发事件开关（配置文件）
 
@@ -114,7 +116,7 @@ KeyBindEvents.on('your_custom_key', event => {
 
 ## 安装
 
-把 `build/libs/skillslots_addon-1.0.19.jar` 放入 `mods` 目录，需要：
+把 `build/libs/skillslots_addon-1.0.20.jar` 放入 `mods` 目录，需要：
 
 - Minecraft 1.20.1 + Forge 47.x
 - SkillSlots 2.1.1+forge（必备，mods.toml 已声明依赖）
@@ -130,7 +132,7 @@ $env:JAVA_HOME='C:/Program Files/Java/jdk-17'
 .\gradlew.bat build --offline
 ```
 
-产物位于 `build/libs/skillslots_addon-1.0.19.jar`。
+产物位于 `build/libs/skillslots_addon-1.0.20.jar`。
 
 ## 实现说明
 
